@@ -4,11 +4,22 @@ import {Container, Modal, Button} from "react-bootstrap"
 export default function Dashboard() {
 
   const [show, setShow] = useState(false);
+  const [isEdit, setIsEdit]=useState(false);
 
   const handleViewClose = () => setShow(false);
-  const handleViewShow = () => setShow(true);
+  const handleViewShow = () =>
+  {
+    setShow(true);
+    setIsEdit(false);
+  }
+  
+  
   const handleEditClose = () => setShow(false);
-  const handleEditShow = () => setShow(true);
+  const handleEditShow = () => 
+  {
+    setShow(true);
+    setIsEdit(true);
+  }
 
   return (
     <>
@@ -45,10 +56,22 @@ export default function Dashboard() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Task Title</Modal.Title>
+          <Modal.Title>{isEdit?'Edit Project':'View Project'}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           
+          {
+            isEdit?
+
+            //yes
+
+            "yes"
+
+            :
+
+            //no
+            "no"
+          }
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleViewClose}>
@@ -60,14 +83,14 @@ export default function Dashboard() {
 
     {/* EDIT */}
 
-      <Modal
+      {/* <Modal
         show={show}
         onHide={handleEditClose}
         backdrop="static"
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Edit Model</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           I will not close if you click outside me. Don't even try to press
@@ -80,6 +103,7 @@ export default function Dashboard() {
           <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
+    </> */}
     </>
     </>
   )
