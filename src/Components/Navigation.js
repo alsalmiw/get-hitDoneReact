@@ -20,7 +20,7 @@ export default function Navigation() {
       </Navbar>
     </Container>
     <Routes>
-          <Route path='dashboard' element={<Dashboard />} key='dashboard' />
+          <Route path='dashboard' element={<Dashboard />} key='dashboards' />
     
       </Routes>
     </BrowserRouter>
