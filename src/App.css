@@ -37,6 +37,18 @@
   }
 }
 
+input{
+  text-align: center;
+}
+
+/* Makes the placeholder disappear when it is clicked on  */
+input:focus::placeholder {
+  color: transparent !important;
+}
+
+/* Styling for the placeholders */
 ::placeholder{
+  /* font-size: 1.5rem; */
+  /* color: black !important; */
   text-align: center;
 }

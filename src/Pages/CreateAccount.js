@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 export default function CreateAccount() {
@@ -12,18 +12,18 @@ export default function CreateAccount() {
         </Col>
         <hr />
       </Row>
-      <Row className="d-flex justify-content-center">
-        <Col md={10} className="">
+      <Row className="mt-4 d-flex justify-content-center">
+        <Col md={8} className="">
           <Form>
-            <Form.Group className="mb-3" controlId="formUsername">
-              <Form.Control type="text" placeholder="Username" />
+            <Form.Group className="mb-4" controlId="formUsername">
+              <Form.Control type="text" placeholder="Username"/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="" controlId="formBasicPassword">
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <div className="d-flex justify-content-center">
-              <Button variant="primary" type="submit">
-                Create
+              <Button className="mt-3" variant="primary" type="submit">
+                Create Account
               </Button>
             </div>
           </Form>
